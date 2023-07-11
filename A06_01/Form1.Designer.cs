@@ -30,13 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.chkBurger = new System.Windows.Forms.CheckBox();
             this.SelectBurgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.burgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cheeseBurgerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.baconCheeseBurgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chkBurger = new System.Windows.Forms.CheckBox();
             this.costLblBurger = new System.Windows.Forms.Label();
-            this.Total = new System.Windows.Forms.Label();
+            this.SubtotalLbl = new System.Windows.Forms.Label();
             this.costLblFries = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.SelectFriestoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +44,7 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.chkFries = new System.Windows.Forms.CheckBox();
+            this.subOutLbl = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -73,18 +74,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(202, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // chkBurger
-            // 
-            this.chkBurger.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.chkBurger.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBurger.Location = new System.Drawing.Point(25, 232);
-            this.chkBurger.Name = "chkBurger";
-            this.chkBurger.Size = new System.Drawing.Size(1035, 65);
-            this.chkBurger.TabIndex = 4;
-            this.chkBurger.Text = "Add Burger";
-            this.chkBurger.UseVisualStyleBackColor = false;
-            this.chkBurger.CheckedChanged += new System.EventHandler(this.chkBurger_CheckedChanged);
             // 
             // SelectBurgerToolStripMenuItem
             // 
@@ -120,6 +109,18 @@
             this.baconCheeseBurgerToolStripMenuItem.Text = "Bacon Cheese Burger";
             this.baconCheeseBurgerToolStripMenuItem.Click += new System.EventHandler(this.baconCheeseBurgerToolStripMenuItem_Click);
             // 
+            // chkBurger
+            // 
+            this.chkBurger.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.chkBurger.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBurger.Location = new System.Drawing.Point(25, 232);
+            this.chkBurger.Name = "chkBurger";
+            this.chkBurger.Size = new System.Drawing.Size(1035, 65);
+            this.chkBurger.TabIndex = 4;
+            this.chkBurger.Text = "Add Burger";
+            this.chkBurger.UseVisualStyleBackColor = false;
+            this.chkBurger.CheckedChanged += new System.EventHandler(this.chkBurger_CheckedChanged);
+            // 
             // costLblBurger
             // 
             this.costLblBurger.AutoSize = true;
@@ -131,16 +132,16 @@
             this.costLblBurger.TabIndex = 5;
             this.costLblBurger.Text = "Burger";
             // 
-            // Total
+            // SubtotalLbl
             // 
-            this.Total.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(1009, 1003);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(426, 76);
-            this.Total.TabIndex = 6;
-            this.Total.Text = "Total :";
-            this.Total.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.SubtotalLbl.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SubtotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubtotalLbl.Location = new System.Drawing.Point(1009, 1003);
+            this.SubtotalLbl.Name = "SubtotalLbl";
+            this.SubtotalLbl.Size = new System.Drawing.Size(426, 76);
+            this.SubtotalLbl.TabIndex = 6;
+            this.SubtotalLbl.Text = "Subtotal :";
+            this.SubtotalLbl.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // costLblFries
             // 
@@ -164,7 +165,7 @@
             this.SelectFriestoolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(362, 367);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(402, 48);
+            this.menuStrip2.Size = new System.Drawing.Size(202, 24);
             this.menuStrip2.TabIndex = 7;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
@@ -200,6 +201,7 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(359, 58);
             this.toolStripMenuItem4.Text = "Large";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // chkFries
             // 
@@ -213,15 +215,27 @@
             this.chkFries.UseVisualStyleBackColor = false;
             this.chkFries.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // subOutLbl
+            // 
+            this.subOutLbl.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.subOutLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subOutLbl.Location = new System.Drawing.Point(1334, 1003);
+            this.subOutLbl.Name = "subOutLbl";
+            this.subOutLbl.Size = new System.Drawing.Size(101, 76);
+            this.subOutLbl.TabIndex = 10;
+            this.subOutLbl.Text = "test";
+            this.subOutLbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1579, 1246);
+            this.Controls.Add(this.subOutLbl);
             this.Controls.Add(this.costLblFries);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.Total);
+            this.Controls.Add(this.SubtotalLbl);
             this.Controls.Add(this.costLblBurger);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -247,7 +261,7 @@
         private System.Windows.Forms.ToolStripMenuItem cheeseBurgerToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem baconCheeseBurgerToolStripMenuItem;
         private System.Windows.Forms.Label costLblBurger;
-        private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.Label SubtotalLbl;
         private System.Windows.Forms.Label costLblFries;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem SelectFriestoolStripMenuItem;
@@ -255,6 +269,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.CheckBox chkFries;
+        private System.Windows.Forms.Label subOutLbl;
     }
 }
 

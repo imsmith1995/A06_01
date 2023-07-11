@@ -12,9 +12,16 @@ namespace A06_01
 {
     public partial class Form1 : Form
     {
+        public double subtotal = 0;
+        public double total = 0;
+
         public double regularBurgerCost = 4.00;
         public double CheeseBurgerCost = 4.50;
         public double BaconBurgerCost = 5.50;
+
+        public double friesSmall = 1.50;
+        public double friesMedium = 2.00;
+        public double friesLarge = 2.50;
 
         public Form1()
         {
@@ -70,19 +77,23 @@ namespace A06_01
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             SelectFriestoolStripMenuItem.Text = toolStripMenuItem2.Text;
-            costLblFries.Text = "$1.50";
+            string writer = friesSmall.ToString("C");
+            costLblFries.Text = $"{writer}";
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             SelectFriestoolStripMenuItem.Text = toolStripMenuItem3.Text;
-            costLblFries.Text = "$2.00";
+            string writer = friesMedium.ToString("C");
+            costLblFries.Text = $"{writer}";
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             SelectFriestoolStripMenuItem.Text = toolStripMenuItem4.Text;
-            costLblFries.Text = "$2.50";
+            string writer = friesLarge.ToString("C");
+            costLblFries.Text = $"{writer}";
         }
+
     }
 }
