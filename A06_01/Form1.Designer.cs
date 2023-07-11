@@ -243,7 +243,7 @@
             this.Controls.Add(this.chkBurger);
             this.Controls.Add(this.chkFries);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Best Burgers";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
