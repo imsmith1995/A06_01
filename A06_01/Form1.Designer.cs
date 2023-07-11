@@ -217,14 +217,15 @@
             // 
             // subOutLbl
             // 
+            this.subOutLbl.AutoSize = true;
             this.subOutLbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.subOutLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subOutLbl.Location = new System.Drawing.Point(1334, 1003);
+            this.subOutLbl.Location = new System.Drawing.Point(1300, 1027);
             this.subOutLbl.Name = "subOutLbl";
-            this.subOutLbl.Size = new System.Drawing.Size(101, 76);
+            this.subOutLbl.Size = new System.Drawing.Size(92, 51);
             this.subOutLbl.TabIndex = 10;
             this.subOutLbl.Text = "test";
-            this.subOutLbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.subOutLbl.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // Form1
             // 

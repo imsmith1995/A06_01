@@ -12,7 +12,7 @@ namespace A06_01
 {
     public partial class Form1 : Form
     {
-        public double subtotal = 0;
+        public double subtotal = 0.0;
         public double total = 0;
 
         public double regularBurgerCost = 4.00;
@@ -22,6 +22,17 @@ namespace A06_01
         public double friesSmall = 1.50;
         public double friesMedium = 2.00;
         public double friesLarge = 2.50;
+
+        public double activeBurger = 0.0;
+        public double activeFrie = 0.0;
+
+        public void RecalSubTotal()
+        {
+            subtotal = activeBurger + activeFrie;
+            string writer = subtotal.ToString("C");
+            subOutLbl.Text = $"{writer}";
+        }
+
 
         public Form1()
         {
@@ -36,6 +47,13 @@ namespace A06_01
         private void chkBurger_CheckedChanged(object sender, EventArgs e)
         {
             SelectBurgerToolStripMenuItem.Visible = chkBurger.Checked;
+            if(chkBurger.Checked != true)
+            {
+                activeBurger = 0;
+                costLblBurger.Text = "$0.00";
+                SelectBurgerToolStripMenuItem.Text = "(Select a Burger)";
+                RecalSubTotal();
+            }
         }
 
         private void burgerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +61,8 @@ namespace A06_01
             SelectBurgerToolStripMenuItem.Text = burgerToolStripMenuItem.Text;
             string writer = regularBurgerCost.ToString("C");
             costLblBurger.Text = $"{writer}";
+            activeBurger = regularBurgerCost;
+            RecalSubTotal();
         }
 
         private void cheeseBurgerToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -50,6 +70,8 @@ namespace A06_01
             SelectBurgerToolStripMenuItem.Text = cheeseBurgerToolStripMenuItem1.Text;
             string writer = CheeseBurgerCost.ToString("C");
             costLblBurger.Text = $"{writer}";
+            activeBurger = CheeseBurgerCost;
+            RecalSubTotal();
         }
 
         private void baconCheeseBurgerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,11 +79,17 @@ namespace A06_01
             SelectBurgerToolStripMenuItem.Text = baconCheeseBurgerToolStripMenuItem.Text;
             string writer = BaconBurgerCost.ToString("C");
             costLblBurger.Text = $"{writer}";
+            activeBurger = BaconBurgerCost;
+            RecalSubTotal();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             SelectFriestoolStripMenuItem.Visible = chkFries.Checked;
+            activeFrie = 0;
+            costLblFries.Text = "$0.00";
+            SelectFriestoolStripMenuItem.Text = "(Select a Size)";
+            RecalSubTotal();
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -79,6 +107,8 @@ namespace A06_01
             SelectFriestoolStripMenuItem.Text = toolStripMenuItem2.Text;
             string writer = friesSmall.ToString("C");
             costLblFries.Text = $"{writer}";
+            activeFrie = friesSmall;
+            RecalSubTotal();
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -86,6 +116,8 @@ namespace A06_01
             SelectFriestoolStripMenuItem.Text = toolStripMenuItem3.Text;
             string writer = friesMedium.ToString("C");
             costLblFries.Text = $"{writer}";
+            activeFrie = friesMedium;
+            RecalSubTotal();
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -93,6 +125,8 @@ namespace A06_01
             SelectFriestoolStripMenuItem.Text = toolStripMenuItem4.Text;
             string writer = friesLarge.ToString("C");
             costLblFries.Text = $"{writer}";
+            activeFrie = friesLarge;
+            RecalSubTotal();
         }
 
     }
