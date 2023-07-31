@@ -45,8 +45,23 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.chkFries = new System.Windows.Forms.CheckBox();
             this.subOutLbl = new System.Windows.Forms.Label();
+            this.costLblDrink = new System.Windows.Forms.Label();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.selectDrinkSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.chkDrink = new System.Windows.Forms.CheckBox();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.selectDrinkToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.waterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            this.menuStrip3.SuspendLayout();
+            this.menuStrip4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +86,7 @@
             this.SelectBurgerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(362, 232);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(202, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(402, 48);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,7 +98,7 @@
             this.baconCheeseBurgerToolStripMenuItem});
             this.SelectBurgerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectBurgerToolStripMenuItem.Name = "SelectBurgerToolStripMenuItem";
-            this.SelectBurgerToolStripMenuItem.Size = new System.Drawing.Size(309, 54);
+            this.SelectBurgerToolStripMenuItem.Size = new System.Drawing.Size(309, 58);
             this.SelectBurgerToolStripMenuItem.Text = "(Select a Burger)";
             this.SelectBurgerToolStripMenuItem.Visible = false;
             this.SelectBurgerToolStripMenuItem.Click += new System.EventHandler(this.cheeseBurgerToolStripMenuItem_Click);
@@ -185,21 +200,21 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(299, 58);
             this.toolStripMenuItem2.Text = "Small";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(299, 58);
             this.toolStripMenuItem3.Text = "Medium";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(299, 58);
             this.toolStripMenuItem4.Text = "Large";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -227,12 +242,141 @@
             this.subOutLbl.Text = "test";
             this.subOutLbl.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // costLblDrink
+            // 
+            this.costLblDrink.AutoSize = true;
+            this.costLblDrink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.costLblDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.costLblDrink.Location = new System.Drawing.Point(892, 518);
+            this.costLblDrink.Name = "costLblDrink";
+            this.costLblDrink.Size = new System.Drawing.Size(123, 51);
+            this.costLblDrink.TabIndex = 13;
+            this.costLblDrink.Text = "Drink";
+            // 
+            // menuStrip3
+            // 
+            this.menuStrip3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.menuStrip3.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip3.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip3.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selectDrinkSizeToolStripMenuItem});
+            this.menuStrip3.Location = new System.Drawing.Point(362, 511);
+            this.menuStrip3.Name = "menuStrip3";
+            this.menuStrip3.Size = new System.Drawing.Size(202, 24);
+            this.menuStrip3.TabIndex = 11;
+            this.menuStrip3.Text = "menuStrip3";
+            // 
+            // selectDrinkSizeToolStripMenuItem
+            // 
+            this.selectDrinkSizeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem7});
+            this.selectDrinkSizeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectDrinkSizeToolStripMenuItem.Name = "selectDrinkSizeToolStripMenuItem";
+            this.selectDrinkSizeToolStripMenuItem.Size = new System.Drawing.Size(265, 54);
+            this.selectDrinkSizeToolStripMenuItem.Text = "(Select a Size)";
+            this.selectDrinkSizeToolStripMenuItem.Visible = false;
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem5.Text = "Small";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem6.Text = "Medium";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem7.Text = "Large";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            // 
+            // chkDrink
+            // 
+            this.chkDrink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.chkDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDrink.Location = new System.Drawing.Point(25, 511);
+            this.chkDrink.Name = "chkDrink";
+            this.chkDrink.Size = new System.Drawing.Size(1035, 65);
+            this.chkDrink.TabIndex = 12;
+            this.chkDrink.Text = "Add Drink";
+            this.chkDrink.UseVisualStyleBackColor = false;
+            this.chkDrink.CheckedChanged += new System.EventHandler(this.chkDrink_CheckedChanged);
+            // 
+            // menuStrip4
+            // 
+            this.menuStrip4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.menuStrip4.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip4.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip4.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selectDrinkToolStripMenuItem8});
+            this.menuStrip4.Location = new System.Drawing.Point(362, 673);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.Size = new System.Drawing.Size(535, 58);
+            this.menuStrip4.TabIndex = 14;
+            this.menuStrip4.Text = "menuStrip4";
+            // 
+            // selectDrinkToolStripMenuItem8
+            // 
+            this.selectDrinkToolStripMenuItem8.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10,
+            this.toolStripMenuItem11,
+            this.waterToolStripMenuItem});
+            this.selectDrinkToolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectDrinkToolStripMenuItem8.Name = "selectDrinkToolStripMenuItem8";
+            this.selectDrinkToolStripMenuItem8.Size = new System.Drawing.Size(287, 54);
+            this.selectDrinkToolStripMenuItem8.Text = "(Select a Drink)";
+            this.selectDrinkToolStripMenuItem8.Visible = false;
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem9.Text = "Coke";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem10.Text = "Diet Coke";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(359, 58);
+            this.toolStripMenuItem11.Text = "Sprite";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
+            // 
+            // waterToolStripMenuItem
+            // 
+            this.waterToolStripMenuItem.Name = "waterToolStripMenuItem";
+            this.waterToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.waterToolStripMenuItem.Text = "Water";
+            this.waterToolStripMenuItem.Click += new System.EventHandler(this.waterToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1579, 1246);
+            this.Controls.Add(this.menuStrip4);
+            this.Controls.Add(this.costLblDrink);
+            this.Controls.Add(this.menuStrip3);
+            this.Controls.Add(this.chkDrink);
             this.Controls.Add(this.subOutLbl);
             this.Controls.Add(this.costLblFries);
             this.Controls.Add(this.menuStrip2);
@@ -248,6 +392,10 @@
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.menuStrip3.ResumeLayout(false);
+            this.menuStrip3.PerformLayout();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,6 +419,19 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.CheckBox chkFries;
         private System.Windows.Forms.Label subOutLbl;
+        private System.Windows.Forms.Label costLblDrink;
+        private System.Windows.Forms.MenuStrip menuStrip3;
+        private System.Windows.Forms.ToolStripMenuItem selectDrinkSizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.CheckBox chkDrink;
+        private System.Windows.Forms.MenuStrip menuStrip4;
+        private System.Windows.Forms.ToolStripMenuItem selectDrinkToolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem waterToolStripMenuItem;
     }
 }
 

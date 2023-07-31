@@ -23,14 +23,35 @@ namespace A06_01
         public double friesMedium = 2.00;
         public double friesLarge = 2.50;
 
+        public double drinkSmall = 1.00;
+        public double drinkMedium = 1.50;
+        public double drinkLarge = 2.00;
+
         public double activeBurger = 0.0;
         public double activeFrie = 0.0;
+        public double activeDrink = 0.0;
 
         public void RecalSubTotal()
         {
-            subtotal = activeBurger + activeFrie;
+            subtotal = activeBurger + activeFrie + activeDrink;
             string writer = subtotal.ToString("C");
             subOutLbl.Text = $"{writer}";
+        }
+
+        public void WaterCheck()
+        {
+            if(selectDrinkToolStripMenuItem8.Text is "Water")
+            {
+                costLblDrink.Text = "$0.00";
+                activeDrink = 0.0;
+                RecalSubTotal();
+            }
+            {
+                //if(selectDrinkSizeToolStripMenuItem8.Text is "Small")
+                //{
+                //    activeDrink = drinkSmall;
+                //}
+            }
         }
 
 
@@ -129,5 +150,62 @@ namespace A06_01
             RecalSubTotal();
         }
 
+        private void chkDrink_CheckedChanged(object sender, EventArgs e)
+        {
+            selectDrinkSizeToolStripMenuItem.Visible = chkDrink.Checked;
+            selectDrinkToolStripMenuItem8.Visible = chkDrink.Checked;
+            activeDrink = 0;
+            costLblDrink.Text = "$0.00";
+            selectDrinkSizeToolStripMenuItem.Text = "(Select a Size)";
+            RecalSubTotal();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            selectDrinkSizeToolStripMenuItem.Text = toolStripMenuItem5.Text;
+            string writer = drinkSmall.ToString("C");
+            costLblDrink.Text = $"{writer}";
+            activeDrink = drinkSmall;
+            RecalSubTotal();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            selectDrinkSizeToolStripMenuItem.Text = toolStripMenuItem6.Text;
+            string writer = drinkMedium.ToString("C");
+            costLblDrink.Text = $"{writer}";
+            activeDrink = drinkMedium;
+            RecalSubTotal();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            selectDrinkSizeToolStripMenuItem.Text = toolStripMenuItem7.Text;
+            string writer = drinkLarge.ToString("C");
+            costLblDrink.Text = $"{writer}";
+            activeDrink = drinkLarge;
+            RecalSubTotal();
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            selectDrinkToolStripMenuItem8.Text = toolStripMenuItem9.Text;
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            selectDrinkToolStripMenuItem8.Text = toolStripMenuItem10.Text;
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            selectDrinkToolStripMenuItem8.Text= toolStripMenuItem11.Text;
+        }
+
+        private void waterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            selectDrinkToolStripMenuItem8.Text = waterToolStripMenuItem.Text;
+            WaterCheck();
+        }
     }
 }
